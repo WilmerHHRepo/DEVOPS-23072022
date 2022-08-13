@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: article-api-deployment
+  labels:
+    app: article-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: article-api
+  template:
+    metadata:
+      labels:
+        app: article-api
+    spec:
+      containers:
+        - name: article-api
+          image: article-api:v2
+          ports:
+            - containerPort: 8080
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: "prod"
+            - name: SPRING_DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: secret-basic-auth
+                  key: password
+            - name: SPRING_DB_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: secret-basic-auth
+                  key: username
+
+
