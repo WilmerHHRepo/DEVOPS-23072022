@@ -9,7 +9,7 @@
 2. Ver contenedores corriendo con docker compose
 
  ```bash
-    docker-compose up -d
+    docker-compose ps
  ```
 
 3. Ingresar a contenedor
