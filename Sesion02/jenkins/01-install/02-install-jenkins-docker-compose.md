@@ -17,6 +17,16 @@
     docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
     ```
 
+1. Ver secreto de jenkins
+    ```bash
+    cat jenkins_home/secrets/initialAdminPassword
+    docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
+    
+    docker exec -it jenkins /bin/bash
+    cat /var/jenkins_home/secrets/initialAdminPassword
+    ```
+
+
     ```bash         
     docker exec -it --user root jenkins /bin/bash
     chown jenkins /var/run/docker.sock
