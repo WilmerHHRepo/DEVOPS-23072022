@@ -15,7 +15,6 @@
     ```bash
     docker-compose up -d
     docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
-    docker exec -it jenkins bash
     ```
 
     ```bash         
