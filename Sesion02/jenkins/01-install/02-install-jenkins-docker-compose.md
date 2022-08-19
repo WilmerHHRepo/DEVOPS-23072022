@@ -1,6 +1,6 @@
 1. Preparación:
-    * Upload files 
-        * docker-compose.yaml
+    * Renombrar archivo docker-compose-v1.yaml a docker-compose.yaml
+        * docker-compose-v1.yaml
     * Crear folder: 
 
     ```bash
@@ -9,7 +9,7 @@
 
 1. Iniciar docker-compose
     ```bash
-    docker-compose -f docker-compose-v1.yaml up -d
+    docker-compose up -d
     docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
     docker exec -it jenkins bash
     ```
