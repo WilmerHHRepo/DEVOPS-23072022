@@ -1,6 +1,5 @@
 1. Preparación:
     * Renombrar archivo docker-compose-v1.yaml a docker-compose.yaml
-        * docker-compose.yaml
     * Crear folder: 
 
     ```bash
