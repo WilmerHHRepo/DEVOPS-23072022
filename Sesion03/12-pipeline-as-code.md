@@ -16,7 +16,7 @@
         * Pipeline
             * Definition: Pipeline script -->
 
-              ```bash         
+        ```bash         
         pipeline {
             // Cualquier agente
             agent none
