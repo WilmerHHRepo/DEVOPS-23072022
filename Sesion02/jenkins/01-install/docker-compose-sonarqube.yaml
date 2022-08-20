@@ -20,6 +20,6 @@ services:
       - ./sonarqube_home/logs:/opt/sonarqube/logs
       - ./sonarqube_home/temp:/opt/sonarqube/temp
     networks:
-      - net_sonarqube
+      - net
 networks:
   net:
