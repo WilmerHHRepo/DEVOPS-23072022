@@ -6,6 +6,7 @@
     1. Manage Plugins
     1. Clic Avialable
     1. Buscar Plugin: "Docker"
+    2. Buscar Plugin: "Docker Pipeline"
     
 # JOBS
 1. Crear 01-hello-world-pipeline
