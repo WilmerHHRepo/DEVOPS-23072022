@@ -26,64 +26,64 @@
         * Pipeline
             * Definition: Pipeline script -->
               ```bash              
-              pipeline {
-                agent any
-                stages {
-                  stage('get sources') {
-                    steps {
-                      sh 'echo Obteniendo las fuentes de github...'
-                    }
+                pipeline {
+                  agent any
+                    stages {
+                      stage('get sources') {
+                        steps {
+                          sh 'echo Obteniendo las fuentes de github...'
+                        }
+                      }
+                      stage('Build') {
+                        steps {
+                          sh 'echo Compilando...'
+                        }
+                      }
+                      stage('Testing') {
+                        steps {
+                          sh 'echo testing...'
+                        }
+                      }
+                      stage('SonarQube') {
+                        steps {
+                          sh 'echo sonarqube...'
+                        }
+                      }
+                      stage('Deploy to Dev') {
+                        steps {
+                          sh 'echo deploy to dev...'
+                        }
+                      }
+                      stage('Deploy ok?') {
+                        steps {
+                          sh 'echo El cambio fue correcto?'
+                        }
+                      }
+                      stage('Deploy to UAT') {
+                        steps {
+                          sh 'echo deploy to dev...'
+                        }
+                      }
+                      stage('Deploy ok?') {
+                        steps {
+                          sh 'echo El cambio fue correcto?'
+                        }
+                      }
+                      stage('Deploy to Prod') {
+                        steps {
+                          sh 'echo deploy to dev...'
+                        }
+                      }
+                      stage('Deploy ok?') {
+                        steps {
+                          sh 'echo El cambio fue correcto?'
+                        }
+                      }     
+                      stage('RollBack!!') {
+                        steps {
+                          sh 'echo Error!! Rolball!!'
+                        }
+                      }                   
                   }
-                  stage('Build') {
-                    steps {
-                      sh 'echo Compilando...'
-                    }
-                  }
-                  stage('Testing') {
-                    steps {
-                      sh 'echo testing...'
-                    }
-                  }
-                  stage('SonarQube') {
-                    steps {
-                      sh 'echo sonarqube...'
-                    }
-                  }
-                  stage('Deploy to Dev') {
-                    steps {
-                      sh 'echo deploy to dev...'
-                    }
-                  }
-                  stage('Deploy ok?') {
-                    steps {
-                      sh 'echo El cambio fue correcto?'
-                    }
-                  }
-                  stage('Deploy to UAT') {
-                    steps {
-                      sh 'echo deploy to dev...'
-                    }
-                  }
-                  stage('Deploy ok?') {
-                    steps {
-                      sh 'echo El cambio fue correcto?'
-                    }
-                  }
-                  stage('Deploy to Prod') {
-                    steps {
-                      sh 'echo deploy to dev...'
-                    }
-                  }
-                  stage('Deploy ok?') {
-                    steps {
-                      sh 'echo El cambio fue correcto?'
-                    }
-                  }     
-                  stage('RollBack!!') {
-                    steps {
-                      sh 'echo Error!! Rolball!!'
-                    }
-                  }                   
                 }
-              }
               ```
