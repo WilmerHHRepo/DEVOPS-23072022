@@ -24,7 +24,9 @@
         * Nombre: 08-maven-from-git-pipeline
         * Description: Pipeline as code
         * Pipeline --> Pipeline from SCM --> Git
-        * Repository Url:
+        * Repository Url: https://github.com/aldo2510/DEVOPS-23072022.git
+        * Branch: */main
+        * Jenkinsfile Path: Sesion03/Jenkinsfiles/Jenkinsfile-scm
 
         }
         ```
