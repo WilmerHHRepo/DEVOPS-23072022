@@ -37,7 +37,7 @@
         * Nombre: job6-maven
         * Description: Maven demo
         * Source Code Management: Git
-            * Repository: https://github.com/mzegarras/labmaven.git
+            * Repository: https://github.com/aldo2510/galaxy-jenkins-lab-maven.git
             * Add credentials:
                 * Kind: Username with Password
                 * id: token_github
