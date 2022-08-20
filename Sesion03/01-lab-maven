@@ -7,6 +7,8 @@
     1. Clic Avialable
     1. Buscar Plugin: "Maven Integration"
     1. Buscar Plugin: "Git"
+    1. Buscar Plugin: "JUnit Attachments"
+    1. Clic en Install Without restart
     
 1. Instalar maven
     1. Manage Jenkins
@@ -15,15 +17,18 @@
     1. Clic en "Add Maven"
         * Name: maven-default
         * Install automatically: Check
+    1. Clic en Save
 
 
 
 # JOBS
-1. Crear job6-maven
+1. Crear 06-job-maven
     * Crear proyecto del estilo libre.
-        * Nombre: job6-maven
+        * Nombre: 06-job-maven
         * Description: Maven demo
-        * Build --> Invoke top-level Maven targest --> 
+        * Build --> Invoke top-level Maven targets --> 
+        * Maven version: maven-default
+        * Goals:
         ```bash         
         mvn --version
         ```
@@ -33,9 +38,15 @@
         * Description: Maven demo
         * Source Code Management: Git
             * Repository: https://github.com/mzegarras/labmaven.git
-            * Branch: */master
-        * Build --> Invoke top-level Maven targest --> 
-        * Maven version: maven
+            * Add credentials:
+                * Kind: Username with Password
+                * id: token_github
+                * Username: aldo2510
+                * Password: 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 
+            * Branch: */main
+        * Build --> Invoke top-level Maven targets --> 
+        * Maven version: maven-default
+        * Goals
         ```bash         
         package
         ```
@@ -46,4 +57,4 @@
     * Nombre: job6-maven
     * Post-buil Actions
         * Add Publish JUnit test result report
-        * Test report XMLs: target/surefire-reports/*.xml
+            * Test report XMLs: target/surefire-reports/*.xml
