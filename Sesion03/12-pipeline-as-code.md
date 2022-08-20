@@ -19,6 +19,21 @@
               docker ps
               ```
               
+                      ```bash         
+        pipeline {
+            // Cualquier agente
+            agent none
+
+            stages {
+                stage('Build') {
+                    steps {
+                        echo 'Building..'
+                    }
+                }
+            }
+        }
+        ```
+              
  
  1. Crear 02-pipeline-esqueleto
 * Nombre: 02-pipeline-esqueleto
