@@ -22,9 +22,7 @@ pipeline {
             }
         }
         stage('SonarQube analysis') {
-            agent {
-                any
-            }
+            agent any
             steps {
                 script{
                     def scannerHome = tool 'scanner-default';;
