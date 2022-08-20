@@ -18,7 +18,7 @@
         1. "Use SMTP Authentication"
         1. "User": "user"
         1. "Password": "password"
-        1. Use TLS: true
+        1. Use SSL: true
         1. SMTP Port: 465
         1. Reply address: noreply@gmail.com
         1. Charset: UTF-8
