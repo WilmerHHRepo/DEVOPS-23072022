@@ -25,7 +25,7 @@
         * Description: Mi primer pipeline
         * Pipeline
             * Definition: Pipeline script -->
-              ```bash              
+              ```groovy              
                 pipeline {
                   agent any
                     stages {
