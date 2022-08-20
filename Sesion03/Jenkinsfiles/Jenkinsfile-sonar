@@ -15,7 +15,7 @@ pipeline {
                     url: 'https://github.com/aldo2510/galaxy-jenkins-lab-maven.git',
                     branch: 'main'
 
-                sh 'mvn -B verify'
+                sh 'mvn package'
             }
 
             post{
@@ -26,7 +26,7 @@ pipeline {
         }
         stage('SonarQube analysis') {
             agent {
-                docker { image 'maven:3.6.3-openjdk-11-slim' }
+                any
             }
             steps {
                 script{
