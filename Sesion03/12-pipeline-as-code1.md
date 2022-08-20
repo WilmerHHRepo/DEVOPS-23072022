@@ -12,6 +12,6 @@
 # Pipelines
 1. Crear 01-pipeline
 * Nombre: 01-pipeline
-        * Description: Mi primer pipeline
-        * Pipeline
-            * Definition: Pipeline script -->
+    Description: Mi primer pipeline
+    Pipeline
+    Definition: Pipeline script -->
