@@ -9,5 +9,6 @@
     ```bash
     docker rm $(docker ps -aq) -f
 
+    docker-compose -f docker-compose-v3.yaml build
     docker-compose -f docker-compose-v3.yaml up -d
     ```
