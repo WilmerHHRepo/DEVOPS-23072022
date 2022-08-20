@@ -15,11 +15,8 @@
         * Description: Mi primer pipeline
         * Pipeline
             * Definition: Pipeline script -->
+
               ```bash         
-              docker ps
-              ```
-              
-                      ```bash         
         pipeline {
             // Cualquier agente
             agent none
