@@ -25,11 +25,14 @@ pipeline {
                 }
             }
 
-            stage('SonarQube analysis') {
-                steps {
-                    script{
-                        def scannerHome = tool 'SonarScanner 4.0';;
-                        withSonarQubeEnv('sonar-server') {
+        stage('SonarQube analysis') {
+            agent {
+                docker { image 'maven:3.6.3-openjdk-11-slim' }
+            }
+            steps {
+                script{
+                    def scannerHome = tool 'SonarScanner 4.0';;
+                    withSonarQubeEnv('sonar-server') {
                         sh "${scannerHome}/bin/sonar-scanner \
                             -Dsonar.projectKey=labmaven01 \
                             -Dsonar.projectName=labmaven01"
