@@ -1,20 +1,26 @@
 # JOBS
 
-1. Crear job1
+1. Crear 01-mi-primer-job
     1. Crear proyecto del estilo libre.
-        * Nombre: job01
-        * Description: Primer job
+        * Nombre: 01-mi-primer-job
+        * Description: 01-mi-primer-job
         * Build --> Execute shell --> echo "hola mundo"
 
-1. Editar job1
-    1. Crear proyecto del estilo libre.
-        * Nombre: job01
+1. Crear Folder de pipelines-estilo-libre y mover job 01-mi-primer-job
+    1. Crear Folder
+        * Nombre: pipelines-estilo-libre
+        * Description: pipelines-estilo-libre
+    2. Mover job 01-mi-primer-job a folder pipelines-estilo-libre
+
+1. Editar 01-mi-primer-job
+    1. Edita proyecto del estilo libre.
+        * Nombre: 01-mi-primer-job
         * Description: Primer job
         * Build --> Execute shell --> echo "La fecha del sistema es $(date)"
 
 1. Crear job2
     1. Crear proyecto del estilo libre.
-        * Nombre: job02
+        * Nombre: 02-job
         * Description: Segundo job
         * Build --> Execute shell --> 
         ```console
@@ -48,22 +54,29 @@
     ```console
     docker cp script.sh jenkins:/opt/script.sh
     docker exec -it jenkins bash
-    ls -lt /
+    ls -lt /opt/
+    chmod +x /opt/script.sh
     ``` 
     
+    1. Crear proyecto del estilo libre.
+    * Nombre: 03-job
+    * Description: Tercer job
+    * Build --> Execute shell -->
     ```console
     NOMBRE="DEV"
     APELLIDO="OPS"
-    MOSTRAR=1
+    MOSTRAR=true
 
     /opt/script.sh $NOMBRE $APELLIDO $MOSTRAR
     ``` 
 
-1. Crear job4 con parámtros
+1. Clonar 03-job y renombrarlo a 04-job y agregarle parámtros
     1. En la sección **General**, seleccionar _"This project is parameterized"_
     1. Agregar 3 parámetros:
         | NAME        | TYPE           | Value  |
         | ------------- |:-------------:|:-----|
         | NOMBRE        | String        | DEV |
         | APELLIDO      | String        | OPS |
-        | MOSTRAR       | Boolean       | GO |
+        | MOSTRAR       | Boolean       | true |
+        
+1. Crear vistas y asignarles jobs diferentes
