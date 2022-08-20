@@ -27,6 +27,11 @@ pipeline {
         stage('SonarQube analysis') {
             agent any
             steps {
+
+                git credentialsId: 'github',
+                    url: 'https://github.com/aldo2510/galaxy-jenkins-lab-maven.git',
+                    branch: 'main'
+
                 script{
                     def scannerHome = tool 'scanner-default';;
                     withSonarQubeEnv('sonar-server') {
