@@ -9,7 +9,6 @@ pipeline {
                 docker { image 'maven:3.6.3-openjdk-11-slim' }
             }
             
-
             steps {
 
                 git credentialsId: 'github',
@@ -23,7 +22,6 @@ pipeline {
                 success {
                     archiveArtifacts artifacts: 'target/*.jar', fingerprint: true, onlyIfSuccessful: true
                 }
-            }
 
         stage('SonarQube analysis') {
             agent {
