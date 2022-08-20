@@ -6,8 +6,9 @@
         * Pipeline --> Pipeline script --> 
         ```bash         
         pipeline {
-            // Cualquier agente
-            agent none
+            agent {
+                docker { image 'maven:3.6.3-openjdk-11-slim' }
+            }
             stages {
                 stage('Checkout') {
                     steps {
