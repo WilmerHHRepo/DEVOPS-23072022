@@ -26,6 +26,16 @@
     cat /var/jenkins_home/secrets/initialAdminPassword
     ```
 
+1. Instalar plugins sugeridos: clic en install suggested plugins
+
+1. Crear el primer usuario, para iniciar colocaremos el usuario admin con password admin y luego clic en save and continue.
+
+1. La herramienta nos mostrará la url, clic en save and finish.
+
+1. Finalmente, clic en start using Jenkins.
+
+
+
 
     ```bash         
     docker exec -it --user root jenkins /bin/bash
