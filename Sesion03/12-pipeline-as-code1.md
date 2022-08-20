@@ -17,14 +17,14 @@
         pipeline {
           agent any
             stages {
-              stage('get sources') {
+              stage('Hello World') {
                 steps {
-                  sh 'echo Obteniendo las fuentes de github...'
+                  sh 'echo Hola DevOps Enginers...'
                 }
               }
-              stage('Build') {
+              stage('docker Containers') {
                 steps {
-                  sh 'echo Compilando...'
+                  sh 'docker ps'
                 }
               }
             }
