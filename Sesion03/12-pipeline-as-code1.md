@@ -31,10 +31,10 @@
         }
         ```
         
-1. Crear 01-hello-world-pipeline
+1. Crear 02-esqueleto-pipeline
     * Crear proyecto del estilo libre.
-        * Nombre: 01-hello-world-pipeline
-        * Description: Mi primer pipeline como código
+        * Nombre: 02-esqueleto-pipeline
+        * Description: Pipeline esqueleto
         * Pipeline script:
         ```bash         
         pipeline {
