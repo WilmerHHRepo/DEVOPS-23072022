@@ -27,11 +27,11 @@ services:
       - net
   tomcat:
     container_name: tomcat
-    image: tomcat:9.0.0
+    image: tomcat:9.0.39
     ports:
       - 8885:8080
     volumes:
-      - $PWD/tomcat_home:/usr/local/tomcat/conf
+      - './tomcat-users.xml:/opt/bitnami/tomcat/conf/tomcat-users.xml:rw'
     networks:
       - net
 networks:
