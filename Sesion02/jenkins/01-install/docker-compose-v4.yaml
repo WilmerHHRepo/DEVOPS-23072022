@@ -31,7 +31,7 @@ services:
     ports:
       - 8885:8080
     volumes:
-      - './tomcat_home/tomcat-users.xml:/conf/tomcat-users.xml:rw'
+      - './tomcat_home/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml:rw'
     networks:
       - net
 networks:
