@@ -27,11 +27,14 @@ services:
       - net
   tomcat:
     container_name: tomcat
-    image: tomcat:9.0.0
+    image: tomcat:alpine
     ports:
       - 8885:8080
     volumes:
-      - './tomcat-users.xml:/opt/bitnami/tomcat/conf/tomcat-users.xml:rw'
+      - ./tomcat/tomcat-users.xml:/usr/local/tomcat/conf/tomcat-users.xml:ro
+      - ./tomcat/context.xml:/usr/local/tomcat/conf/Catalina/localhost/manager.xml:ro
+      - ./tomcat/context.xml:/usr/local/tomcat/conf/Catalina/localhost/host-manager.xml:ro
+    restart: always
     networks:
       - net
 networks:
