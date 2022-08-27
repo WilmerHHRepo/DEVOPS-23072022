@@ -14,3 +14,7 @@
       - Build docker Image
       - Push docker Image
       - Run Container
+    - Crear credenciales de dockerhub en Jenkins 
+    - Crear un Folder en Jenkins llamado galaxy-examen
+    - Dentro del folder galaxy-examen se debe crear un pipeline llamado pipeline-final que llame al repositorio donde se encuentra el Jenkinsfile
+    - Exponer lo realizado durante el examen
