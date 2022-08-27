@@ -27,7 +27,7 @@ services:
       - net
   tomcat:
     container_name: tomcat
-    image: tomcat:9.0.39
+    image: tomcat:9.0.0
     ports:
       - 8885:8080
     volumes:
