@@ -18,12 +18,7 @@ pipeline {
 
             post{
                 success {
-                    archiveArtifacts artifacts: 'target/*.jar', fingerprint: true, onlyIfSuccessful: true
-                    nexusArtifactUploader artifacts: [[artifactId: 'labmaven', classifier: '', 
-                                                                    file: 'target/labmaven-0.0.1-SNAPSHOT.jar', type: 'jar']], credentialsId: 'admin', 
-                                                                    groupId: 'cloud.csonic', nexusUrl: '34.125.43.36:8081', 
-                                                                    nexusVersion: 'nexus2', protocol: 'http', 
-                                                                    repository: 'http://34.125.43.36:8081/repository/claro-releases/', version: '0.0.1-SNAPSHOT'                
+                    archiveArtifacts artifacts: 'target/*.jar', fingerprint: true, onlyIfSuccessful: true               
                 }
             }
         }
